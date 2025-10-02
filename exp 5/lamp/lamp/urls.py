@@ -1,5 +1,5 @@
 """
-URL configuration for bmi project.
+URL configuration for lamp project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -16,9 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from bmiapp import views
+from lampapp.views import calculate_power
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.calculate_bmi, name='calculate_bmi'),
+    path('power/', calculate_power, name='power'),
 ]
